@@ -1,0 +1,238 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1c1c; /* Dark background for a premium feel */
+  /* color: #e0e0e0; Light gray text for readability */
+  padding: 30px 100px 50px 100px;
+}
+
+.main-heading {
+  text-align: center;
+  color: #9c27b0; /* Deep purple accent for a standout heading */
+}
+
+#cv-template {
+  outline: none;
+}
+
+.p {
+  text-align: center;
+  color: #ffeb3b;
+}
+
+fieldset {
+  border-radius: 20px;
+  height: 60px;
+  box-shadow: 0 4px 15px rgba(156, 39, 176, 0.5); /* Soft purple shadow for elegance */
+  border: none;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: #2c2c2c;
+  height: auto; /* Slightly lighter gray for fieldset */
+}
+
+label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffcc00; /* Deep purple for labels */
+  display: block;
+  margin-top: 10px;
+  padding-bottom: 2px;
+}
+
+form {
+  margin: auto;
+  background-color: #121212; /* Maintain the dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(156, 39, 176, 0.5); /* Soft purple shadow for the form */
+  padding: 20px;
+  max-width: 600px;
+  min-height: 100vh;
+}
+
+textarea{
+  min-height: 50px;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  background-color: #2a2a2a; /* Darker input background for contrast */
+  color: #ffeb3b;
+  text-transform: capitalize;
+  height: 30px; 
+  font-size: 20px;
+  width: 30vw;
+  padding: 5x 10px;
+  border: 1px solid #9c27b0;
+}
+
+.add-btn {
+  background-color: #9c27b0;
+  color: #ffcc00;
+  height: 30px;
+  padding: 5px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.conatiner {
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  background-color: #333333; /* Darker focus background */
+  color: #ffeb3b; /* Keep bright yellow text color on focus */
+}
+
+.m {
+  margin-top: 10px;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #a0d99f; /* Deep purple for legend text */
+  text-align: left;
+}
+.show-btn {
+  background: #a0d99f;
+  height: 50px;
+  font-size: 20px;
+  color: #ff9a3b;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.7s ease, color 0.7s ease;
+  width: 100%;
+}
+
+.show-btn:hover {
+  background: #a0d99f;
+  color: #9c27b0;
+}
+
+.show-btn:active {
+  background: #76ea74;
+  color: #9b10b3;
+}
+
+#nameT1 {
+  text-transform: capitalize;
+}
+
+#nameT2 {
+  text-transform: capitalize;
+  margin-left: 3px;
+}
+
+#titleT1 {
+  text-transform: capitalize;
+}
+
+
+.container {
+  margin-left: 150px;
+  background-color: #fff;
+  display: flex;
+  width: 60vw;
+  max-width: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* left side */
+
+.left-side {
+  background-color: rgb(48, 40, 56);
+  padding: 20px;
+  width: 57vw;
+  border-radius: 10px;
+}
+
+.Pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 3px solid rgb(165, 165, 165);
+}
+
+#aboutT {
+  text-align: center;
+  margin: 0px 200px;
+}
+
+.pta {
+  margin: 10px 200px;
+}
+
+.about {
+  margin: 10px 200px;
+  padding: 5px;
+}
+
+.intro{
+  margin-left: 20px;
+}
+
+.profile {
+  text-align: center;
+}
+
+h2{
+  color: white;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 15px #99a5f2;
+  border-radius: 20px;
+  height: 30px;
+  padding-top: 10px;
+}
+
+.detail {
+  margin-left: 200px;
+  height: 35px;
+}
+
+.projects {
+  color: white;
+  margin-left:20vw;
+}
+
+#educT,
+#skillT,
+#expT {
+  margin-left: 200px;
+}
+
+/* right side */
+
+.right-side {
+  width: 70%;
+  padding: 20px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+#toggle-skills {
+  box-shadow: 8px 7px 6px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+#toggle-skills:hover {
+  background-color: rgb(161, 161, 161);
+}
