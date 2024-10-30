@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic resume builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cv-form">
+      <h1 class="main-heading">&lt; Let's generate your resume /&gt;</h1>
+      <form id="main-form">
+        <fieldset>
+          <legend>Personal information</legend>
+
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="enter your name"
+            id="nameField"
+          />
+
+          <label for="title">Title:</label>
+          <input
+            type="text"
+            name="title"
+            placeholder="enter your Title"
+            id="titleField"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Profile Picture</legend>
+          <input
+            type="file"
+            name="image"
+            accept="image/*"
+            style="border: none"
+            id="imageField"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>About me</legend>
+          <textarea
+            name="desc"
+            placeholder="Description"
+            id="aboutField"
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact</legend>
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="enter your Email"
+            id="emailField"
+          />
+
+          <label for="title">Phone:</label>
+          <input
+            type="number"
+            name="title"
+            placeholder="enter your phone number"
+            id="phoneField"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+
+          <div id="skill">
+            <label for="skills">Skills:</label>
+            <input
+              type="text"
+              name="skills"
+              placeholder="enter your skill"
+              class="m sk-field"
+            />
+            <div class="conatiner" id="skillsAddBtn">
+              <button onclick="addNewSkillsField()" class="add-btn" type="button">Add</button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experiences</legend>
+
+          <div id="Experience">
+            <label for="lang">Experiences:</label>
+            <input
+              type="text"
+              name="lang"
+              placeholder="enter your Experience"
+              class="m exp-field"
+            />
+            <div class="conatiner" id="expAddBtn">
+              <button onclick="addExp()" class="add-btn" type="button">Add</button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+
+          <div id="education">
+            <label for="educ">Education:</label>
+            <input
+              type="text"
+              name="educ"
+              placeholder="enter your eductaion"
+              class="m educ-field"
+            />
+            <div class="conatiner" id="edAddBtn">
+              <button onclick="addEduc()" class="add-btn" type="button">Add</button>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your projects</legend>
+
+          <div id="project">
+            <label for="project">projects:</label>
+            <input
+              type="text"
+              name="project"
+              placeholder="enter your project"
+              class="m pt-field"
+            />
+            <div class="conatiner" id="ptAddBtn">
+              <button onclick="addPt()" class="add-btn" type="button">Add</button>
+            </div>
+          </div>
+        </fieldset>
+
+        <button
+          onclick="generateResume()"
+          id="toggle-temp"
+          class="show-btn"
+          type="button"
+        >
+          See resume
+        </button>
+      </form>
+    </div>
+
+    <br />
+
+    <div class="container" id="cv-template">
+      <!-- Left Section -->
+      <div class="left-side">
+        <div class="profile">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/026/619/142/original/default-avatar-profile-icon-of-social-media-user-photo-image-vector.jpg"
+            alt="Profile pic"
+            class="Pic"
+            id="imgT"
+          />
+          <div class="intro">
+            <h2 id="nameT1">Kashif Ali</h2>
+            <h2 id="titleT1">I am a web developer</h2>
+          </div>
+        </div>
+        <section id="objective">
+          <h3 class="about">About Me</h3>
+          <p
+            id="aboutT"
+            style="hyphens: auto; color: white; letter-spacing: 1.2px"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            dolorem quae maiores vel neque? Ex modi aut sit quibusdam laborum?
+            Maxime, asperiores accusantium ipsa exercitationem temporibus
+            labore. Ea, beatae porro?
+          </p>
+        </section>
+
+        <section class="Hobbies">
+          <h3 class="pta">Projects</h3>
+          <ul class="projects" id="projectT">
+            <li>Blog website</li>
+            <li>E-commerce website</li>
+            <li>Currencie converter</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- right section -->
+      <div class="right-side">
+        <section id="personal-info">
+          <h3 style="color: black; margin-left: 200px; padding: 10px;">Personal Detail</h3>
+          <div style="display: flex;" class="detail">
+            <p><b>Name:</b></p>
+            <p id="nameT2">Kashif Ali</p>
+          </div>
+          <div style="display: flex; height: 35px" class="detail">
+            <p><b>Email:</b></p>
+            <p>
+              <a id="mailT" href="#1"
+                >mparvezalam1978@gmail.com</a
+              >
+            </p>
+          </div>
+          <div style="display: flex; height: 35px" class="detail">
+            <p><b>Phone:</b></p>
+            <p id="conatctT">0324-8184287</p>
+          </div>
+        </section>
+
+        <section id="education">
+          <h3 style="color: black; margin-left: 200px; padding: 10px;">Educations</h3>
+          <ul id="educT">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h3 style="color: black; margin-left: 200px; padding: 10px;">Skills</h3>
+          <ul id="skillT">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>typescript</li>
+          </ul>
+        </section>
+
+        <section id="work-experience">
+          <h3 style="color: black; margin-left: 200px; padding: 10px;">Experiences</h3>
+          <ul id="expT">
+            <li>none</li>
+            <li>none</li>
+            <li>none</li>
+          </ul>
+        </section>
+
+        <button id="toggle-skills" style="margin-left: 300px;">
+          <b>Hide/Show skills</b>
+        </button>
+      </div>
+      `;
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
